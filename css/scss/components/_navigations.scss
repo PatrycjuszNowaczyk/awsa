@@ -7,6 +7,7 @@
     padding: 15px 0;
     background: $white;
     z-index: 1000;
+    box-shadow: 0 0 1rem rgba(darken($blue, 20%), 0.2);
     &__logo {
         position: relative;
     }

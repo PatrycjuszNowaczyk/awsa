@@ -528,6 +528,8 @@ body {
   padding: 15px 0;
   background: #ffffff;
   z-index: 1000;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 33, 56, 0.2);
+          box-shadow: 0 0 1rem rgba(0, 33, 56, 0.2);
 }
 
 .navigation__logo {
