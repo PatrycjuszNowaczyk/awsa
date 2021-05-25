@@ -1,18 +1,40 @@
 @use '../abstracts/index' as *;
-:root{
-    @media(max-width: 1400px){
+:root {
+    scrollbar-color: $green $white;
+    scrollbar-width: thin;
+    @media(max-width: 1400px) {
         font-size: 50%;
     }
-    @media(min-width: 1921px){
+    @media(min-width: 1921px) {
         font-size: 0.55vw;
     }
 }
-body{
+
+body {
+    overflow: unset;
+    overflow: overlay;
+    overflow-x: hidden;
     font-family: 'Metropolis', sans-serif;
     font-size: 1.8rem;
     color: $black;
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 11px;
+    }
+    &::-webkit-scrollbar-thumb {
+        box-sizing: padding-box;
+        // background: linear-gradient(180deg, #fefefc 0%, #fb4b3f 100%);
+        background-color: $green;
+        background-clip: padding-box;
+        border: 3px solid transparent;
+        width: 11px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
-*::selection{
+
+*::selection {
     color: $white;
     background: darken($green, 10%);
     text-shadow: 0 0 2px #ffffff99;

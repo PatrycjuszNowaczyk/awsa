@@ -68,10 +68,6 @@ embed {
 }
 */
 /* force a vertical scrollbar to prevent a jumpy page */
-html {
-  overflow-y: scroll;
-}
-
 /* we use a lot of ULs that aren't bulleted.
 	you'll have to restore the bullets within content,
 	which is fine because they're probably customized anyway */
@@ -288,6 +284,11 @@ input[type=button] {
   src: url(../assets/fonts/Metropolis-Thin.woff);
   font-weight: 300;
 }
+:root {
+  scrollbar-color: #81B20B #ffffff;
+  scrollbar-width: thin;
+}
+
 @media (max-width: 1400px) {
   :root {
     font-size: 50%;
@@ -299,9 +300,30 @@ input[type=button] {
   }
 }
 body {
+  overflow: unset;
+  overflow: overlay;
+  overflow-x: hidden;
   font-family: "Metropolis", sans-serif;
   font-size: 1.8rem;
   color: #262C2F;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+  width: 11px;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-box-sizing: padding-box;
+          box-sizing: padding-box;
+  background-color: #81B20B;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 *::-moz-selection {
