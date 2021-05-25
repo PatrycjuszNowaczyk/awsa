@@ -1,0 +1,19 @@
+@use '../abstracts/index' as *;
+:root{
+    @media(max-width: 1400px){
+        font-size: 50%;
+    }
+    @media(min-width: 1921px){
+        font-size: 0.55vw;
+    }
+}
+body{
+    font-family: 'Metropolis', sans-serif;
+    font-size: 1.8rem;
+    color: $black;
+}
+*::selection{
+    color: $white;
+    background: darken($green, 10%);
+    text-shadow: 0 0 2px #ffffff99;
+}

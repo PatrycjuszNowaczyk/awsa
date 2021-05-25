@@ -1,0 +1,13 @@
+@use '../abstracts/index' as *;
+.navigation {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background: $white;
+    z-index: 1000;
+    &__logo {
+        position: relative;
+    }
+}
