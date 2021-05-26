@@ -285,7 +285,7 @@ input[type=button] {
   font-weight: 300;
 }
 :root {
-  scrollbar-color: #81B20B #ffffff;
+  scrollbar-color: #005C9E #ffffff;
   scrollbar-width: thin;
 }
 
@@ -302,28 +302,34 @@ input[type=button] {
 body {
   overflow: unset;
   overflow: overlay;
-  overflow-x: hidden;
   font-family: "Metropolis", sans-serif;
   font-size: 1.8rem;
   color: #262C2F;
+  -webkit-transition: background-color 1s 0.3s ease-in-out;
+  -o-transition: background-color 1s 0.3s ease-in-out;
+  transition: background-color 1s 0.3s ease-in-out;
 }
 
 body::-webkit-scrollbar {
   background-color: transparent;
-  width: 11px;
+  width: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
   -webkit-box-sizing: padding-box;
           box-sizing: padding-box;
-  background-color: #81B20B;
+  background-color: white;
   background-clip: padding-box;
-  border: 3px solid transparent;
-  width: 11px;
+  border: 1px solid #005c9e;
 }
 
 body::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
+}
+
+body.hidden-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 92, 158, 0);
+  border: 3px solid rgba(255, 255, 255, 0);
 }
 
 *::-moz-selection {
@@ -479,6 +485,7 @@ body::-webkit-scrollbar-track {
 .img-cover-625 {
   position: relative;
   width: 100%;
+  height: auto;
   padding-top: 62.5%;
 }
 
@@ -495,6 +502,7 @@ body::-webkit-scrollbar-track {
 .img-cover-400 {
   position: relative;
   width: 100%;
+  height: auto;
   padding-top: 40%;
 }
 
@@ -511,6 +519,7 @@ body::-webkit-scrollbar-track {
 .img-cover-260 {
   position: relative;
   width: 100%;
+  height: auto;
   padding-top: 26%;
 }
 
