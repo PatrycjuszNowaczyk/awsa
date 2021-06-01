@@ -3,8 +3,8 @@
     display: inline-block;
     position: relative;
     padding: 1em 2.2em;
-    background: $blue;
-    color: $white;
+    background: $white;
+    color: $blue;
     font-weight: 700;
     z-index: 0;
     overflow: hidden;
@@ -47,7 +47,7 @@
         }
     }
     &::before {
-        content: url('../assets/img/highway.svg');
+        content: url(../assets/img/highway-white.svg);
         position: absolute;
         top: 18px;
         left: -35px;

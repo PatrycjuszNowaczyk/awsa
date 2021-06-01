@@ -15,7 +15,8 @@ body {
     overflow: overlay;
     font-family: 'Metropolis', sans-serif;
     font-size: 1.8rem;
-    color: $black;
+    font-weight: 100;
+    color: $white;
     transition: background-color 1s 0.3s ease-in-out;
     &::-webkit-scrollbar {
         background-color: transparent;
