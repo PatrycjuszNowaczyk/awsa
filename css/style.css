@@ -332,6 +332,34 @@ body.hidden-scrollbar::-webkit-scrollbar-thumb {
   border: 3px solid rgba(255, 255, 255, 0);
 }
 
+.mainContent {
+  position: relative;
+}
+
+.stripes {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.stripes .stripe-1 {
+  height: 100%;
+  display: inline-block;
+}
+
+.stripes .stripe-2 {
+  height: 100%;
+  display: inline-block;
+}
+
+.stripes .stripe-3 {
+  height: 100%;
+  display: inline-block;
+}
+
 *::-moz-selection {
   color: #ffffff;
   background: #5e8208;
@@ -413,7 +441,7 @@ body.hidden-scrollbar::-webkit-scrollbar-thumb {
   width: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .buttonBack::before {
     display: none;
   }
@@ -750,6 +778,11 @@ body.hidden-scrollbar::-webkit-scrollbar-thumb {
     padding-top: 1vw;
   }
 }
+.headerBig#header__mainpage .headerBig__image {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
 .headerSmall {
   position: relative;
   margin-top: 90px;
@@ -819,18 +852,25 @@ body.hidden-scrollbar::-webkit-scrollbar-thumb {
   min-width: 138px;
 }
 
-.footer__socials .bi {
+@media (min-width: 1200px) {
+  .footer__socials-link {
+    -webkit-transform: translateX(0.8rem);
+        -ms-transform: translateX(0.8rem);
+            transform: translateX(0.8rem);
+  }
+}
+.footer__socials-link .bi {
   position: relative;
   color: #ffffff;
   font-size: 5rem;
   z-index: 0;
 }
 
-.footer__socials .bi::before {
+.footer__socials-link .bi::before {
   vertical-align: text-bottom;
 }
 
-.footer__socials .bi::after {
+.footer__socials-link .bi::after {
   content: "";
   position: absolute;
   top: calc(50%);
@@ -851,13 +891,13 @@ body.hidden-scrollbar::-webkit-scrollbar-thumb {
   transition: all 0.1s ease;
 }
 
-.footer__socials .bi:hover::before {
+.footer__socials-link .bi:hover::before {
   opacity: 0.5;
   -webkit-animation: socials_fadeIn 0.3s 0.2s ease forwards;
           animation: socials_fadeIn 0.3s 0.2s ease forwards;
 }
 
-.footer__socials .bi:hover::after {
+.footer__socials-link .bi:hover::after {
   -webkit-transform: translate(-50%, -50%) scale(1);
       -ms-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -866,13 +906,13 @@ body.hidden-scrollbar::-webkit-scrollbar-thumb {
   transition: all 0.3s 0.2s ease;
 }
 
-.footer__socials .bi.bi-facebook {
+.footer__socials-link .bi.bi-facebook {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.footer__socials .bi.bi-facebook:hover {
+.footer__socials-link .bi.bi-facebook:hover {
   color: #005C9E;
 }
 

@@ -32,10 +32,38 @@ body {
         background-color: rgba(0, 0, 0, 0);
     }
     &.hidden-scrollbar {
-            &::-webkit-scrollbar-thumb {
-                background-color: rgba($blue, 0);
-                border: 3px solid rgba($white, 0);
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($blue, 0);
+            border: 3px solid rgba($white, 0);
         }
+    }
+}
+
+.mainContent {
+    position: relative;
+}
+
+.stripes {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .stripe-1 {
+        height: 100%;
+        // width: 0.5rem;
+        display: inline-block;
+    }
+    .stripe-2 {
+        height: 100%;
+        // width: 0.5rem;
+        display: inline-block;
+    }
+    .stripe-3 {
+        height: 100%;
+        // width: 0.5rem;
+        display: inline-block;
     }
 }
 

@@ -92,6 +92,11 @@
             }
         }
     }
+    &#header__mainpage{
+        .headerBig__image{
+            filter: brightness(0.7);
+        }
+    }
 }
 
 .headerSmall {
